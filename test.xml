@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<account>
+
+<title>Test SIP</title>
+
+<username>53910</username>
+<authname>53910</authname>
+<password>r9qXC2KePBO0</password>
+
+<domain>sip2d.nwpbx.it</domain>
+
+
+<transport>udp</transport>
+
+</account>
