@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provisioning Groundwire</title>
-    <script>
-        // Inserisci il link al tuo file config.xml su GitHub
-        const xmlUrl = "https://polv89.github.io/gw-test/config.xml";
-        
-        // Usiamo provlinkbs:// che mappa nativamente l'HTTPS su Groundwire
-        const provlink = xmlUrl.replace("https://", "provlinkbs://");
-
-        window.onload = function() {
-            const ua = navigator.userAgent;
-            if (ua.indexOf('Groundwire') === -1 && ua.indexOf('Acrobits') === -1) {
-                window.location.href = provlink;
-            }
-        };
-    </script>
+    <title>Provisioning NWPBX</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; background: #f4f4f9; }
-        .btn { display: inline-block; padding: 12px 24px; background: #0056b3; color: white; text-decoration: none; border-radius: 8px; margin-top: 20px; font-weight: bold; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: #f4f6f9; 
+            color: #333; 
+        }
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            max-width: 400px; 
+            margin: 40px auto; 
+        }
+        h2 { margin-bottom: 10px; color: #111; }
+        p { color: #666; font-size: 14px; margin-bottom: 30px; line-height: 1.4; }
+        .btn { 
+            display: block; 
+            padding: 14px; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            font-size: 16px; 
+            margin: 15px auto;
+            width: 85%;
+        }
+        .btn-primary {
+            background: #007aff; 
+            box-shadow: 0 4px 6px rgba(0,122,255,0.3);
+        }
+        .btn-secondary {
+            background: #34c759; 
+            box-shadow: 0 4px 6px rgba(52,199,89,0.3);
+        }
     </style>
 </head>
 <body>
-    <h2>Configurazione Groundwire in corso...</h2>
-    <p>Se l'app non si apre automaticamente, clicca sul pulsante qui sotto.</p>
-    
-    <script>
-        document.write('<a href="' + provlink + '" class="btn">Apri in Groundwire</a>');
-    </script>
+
+    <div class="card">
+        <h2>Configura Groundwire</h2>
+        <p>Inquadra il QR ed esegui un tap su uno dei due bottoni per avviare il provisioning sul telefono.</p>
+        
+        <a href="groundwire://preferences?url=https://polv89.github.io/gw-test/config.xml" class="btn btn-primary">Opzione 1 (iOS Direct)</a>
+        
+        <a href="provlinkbs://polv89.github.io/gw-test/config.xml" class="btn btn-secondary">Opzione 2 (Acrobits Link)</a>
+    </div>
+
 </body>
 </html>
