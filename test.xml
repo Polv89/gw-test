@@ -5,8 +5,8 @@
        CREDENZIALI SIP (obbligatori)
        ============================================================ -->
   <title>Nome Account</title>
-  <username>17571</username>
-  <password>LVJHRRNCLOMQ</password>
+  <username>miapassword</username>
+  <password>miapassword</password>
   <userDisplayName>Mario Rossi</userDisplayName>
   <!-- authUsername: solo se diverso da username -->
   <!-- <authUsername>auth_user</authUsername> -->
