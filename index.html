@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Provisioning Groundwire</title>
     <script>
-        // Inserisci il link reale al tuo file XML su GitHub
+        // Inserisci il link al tuo file config.xml su GitHub
         const xmlUrl = "https://polv89.github.io/gw-test/config.xml";
         
-        // FORZIAMO L'HTTPS NATIVO PER GROUNDWIRE
-        const provlink = xmlUrl.replace("https://", "provlinks://");
+        // Usiamo provlinkbs:// che mappa nativamente l'HTTPS su Groundwire
+        const provlink = xmlUrl.replace("https://", "provlinkbs://");
 
         window.onload = function() {
             const ua = navigator.userAgent;
