@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions>
-  <account>
-    <name>Test NWPBX</name>
+<custom_provisioning>
+  <account type="sip">
+    <display_name>Test NWPBX</display_name>
     <username>17571</username>
-    <authname>17571</authname>
-    <password>LA_TUA_NUOVA_PASSWORD</password>
+    <authid>17571</authid>
+    <password>LVJHRRNCLOMQ</password>
     <domain>sip2a-test.nwpbx.it</domain>
-    <host>sip2a-test.nwpbx.it</host>
-    <transport>udp</transport>
+    <transport>UDP</transport>
   </account>
-</definitions>
+</custom_provisioning>
