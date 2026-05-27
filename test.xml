@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <account>
-
-<title>Test SIP</title>
-
-<username>17571</username>
-<authname>17571</authname>
-<password>Kc6i30QBBXpc</password>
-
-<domain>sip2a-test.nwpbx.it</domain>
-
-
-<transport>udp</transport>
-
+  <title>Test SIP</title>
+  <username>17571</username>
+  <authid>17571</authid>
+  <password>INSERISCI_LA_NUOVA_PASSWORD</password>
+  <host>sip2a-test.nwpbx.it</host>
+  <transport>udp</transport>
 </account>
