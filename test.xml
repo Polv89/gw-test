@@ -4,11 +4,11 @@
 
 <title>Test SIP</title>
 
-<username>53910</username>
-<authname>53910</authname>
-<password>r9qXC2KePBO0</password>
+<username>17571</username>
+<authname>17571</authname>
+<password>Kc6i30QBBXpc</password>
 
-<domain>sip2d.nwpbx.it</domain>
+<domain>sip2a-test.nwpbx.it</domain>
 
 
 <transport>udp</transport>
