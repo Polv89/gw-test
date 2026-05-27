@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<custom_provisioning>
+<flat_account_list>
   <account type="sip">
-    <display_name>Test NWPBX</display_name>
+    <name>Test NWPBX</name>
     <username>17571</username>
-    <authid>17571</authid>
+    <authname>17571</authname>
     <password>LVJHRRNCLOMQ</password>
     <domain>sip2a-test.nwpbx.it</domain>
-    <transport>UDP</transport>
+    <transport>udp</transport>
   </account>
-</custom_provisioning>
+</flat_account_list>
