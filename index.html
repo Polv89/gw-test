@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Provisioning Groundwire</title>
     <script>
-        // INSERISCI QUI IL LINK ESATTO AL TUO FILE XML SU GITHUB PAGES
+        // Inserisci il link reale al tuo file XML su GitHub
         const xmlUrl = "https://polv89.github.io/gw-test/config.xml";
         
-        // Sostituisce https:// con il protocollo di Groundwire
-        const provlink = xmlUrl.replace("https://", "provlinkbs://");
+        // FORZIAMO L'HTTPS NATIVO PER GROUNDWIRE
+        const provlink = xmlUrl.replace("https://", "provlinks://");
 
         window.onload = function() {
             const ua = navigator.userAgent;
-            
-            // Se chi apre la pagina NON è l'app Groundwire, forza l'apertura dell'app
             if (ua.indexOf('Groundwire') === -1 && ua.indexOf('Acrobits') === -1) {
                 window.location.href = provlink;
             }
@@ -30,7 +28,6 @@
     <p>Se l'app non si apre automaticamente, clicca sul pulsante qui sotto.</p>
     
     <script>
-        // Crea dinamicamente il pulsante di emergenza con il link corretto
         document.write('<a href="' + provlink + '" class="btn">Apri in Groundwire</a>');
     </script>
 </body>
