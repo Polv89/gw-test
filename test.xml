@@ -1,11 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flat_account_list>
-  <account type="sip">
-    <name>Test NWPBX</name>
-    <username>17571</username>
-    <authname>17571</authname>
-    <password>LVJHRRNCLOMQ</password>
-    <domain>sip2a-test.nwpbx.it</domain>
-    <transport>udp</transport>
-  </account>
-</flat_account_list>
+<account>
+
+  <!-- ============================================================
+       CREDENZIALI SIP (obbligatori)
+       ============================================================ -->
+  <title>Nome Account</title>
+  <username>17571</username>
+  <password>LVJHRRNCLOMQ</password>
+  <userDisplayName>Mario Rossi</userDisplayName>
+  <!-- authUsername: solo se diverso da username -->
+  <!-- <authUsername>auth_user</authUsername> -->
+  <host>sip2a-test.nwpbx.it</host>
+  <!-- porta opzionale: sip.esempio.it:5060 -->
+
+  <!-- Trasporto: udp | tcp | tls | tls+sip: -->
+  <transport>udp</transport>
+
+  <!-- Scadenza registrazione (secondi, min 30) -->
+  <expires>600</expires>
+
+  <!-- Caller ID mostrato nel From: header -->
+  <!-- <userCallerId>Mario Rossi</userCallerId> -->
+
+  <!-- Abilita messaggistica SIP/SIMPLE -->
+  <allowMessage>0</allowMessage>
+
+  <!-- ============================================================
+       PROXY (opzionale — se il proxy è diverso dall'host)
+       ============================================================ -->
+  <!-- <proxy>proxy.esempio.it:5060</proxy> -->
+
+  <!-- Outbound proxy -->
+  <!-- <outboundProxy_enabled>1</outboundProxy_enabled> -->
+  <!-- <outboundProxy_host>proxy.esempio.it:5060</outboundProxy_host> -->
+  <!-- <outboundProxy_transport>udp</outboundProxy_transport> -->
+
+  <!-- ============================================================
+       CHIAMATE IN INGRESSO / PUSH
+       icm: auto | push | keepAwake | off
+       ============================================================ -->
+  <icm>push</icm>
+
+  <!-- SIPIS per push notification (default: sipis.acrobits.cz) -->
+  <!-- Usare 0 per server SIPIS singolo (no load balancing) -->
+  <sipisHostPrefixLength>0</sipisHostPrefixLength>
+  <!-- <sipisHost>sipis.mioserver.it</sipisHost> -->
+  <!-- <sipisRegServer>sipis.mioserver.it</sipisRegServer> -->
+
+  <!-- ============================================================
+       CODEC AUDIO
+       103=Opus, 9=G722, 0=G711u, 8=G711a, 18=G729, 102=iLBC, 3=GSM
+       ============================================================ -->
+  <codecOrder>103,9,0,8,18</codecOrder>
+  <codecOrder3G>103,18,0,8</codecOrder3G>
+  <opusOptions.class>wb</opusOptions.class>
+  <opusOptions3G.class>nb</opusOptions3G.class>
+
+  <!-- DTMF: rfc2833,info,audio -->
+  <dtmfOrder>rfc2833,info,audio</dtmfOrder>
+
+  <!-- ============================================================
+       VIDEO (disabilita se non necessario)
+       ============================================================ -->
+  <allowVideo>0</allowVideo>
+
+  <!-- ============================================================
+       NAT TRAVERSAL
+       natTraversal: off | auto | stunOnly | turnAlways | ice
+       ============================================================ -->
+  <natTraversal>auto</natTraversal>
+  <keepAlive>1</keepAlive>
+  <keepAlivePeriod>30</keepAlivePeriod>
+  <!-- <STUN>stun.esempio.it:3478</STUN> -->
+
+  <!-- ============================================================
+       SEGRETERIA
+       ============================================================ -->
+  <!-- <voiceMailNumber>*97</voiceMailNumber> -->
+  <!-- <subscribeForVoicemail>1</subscribeForVoicemail> -->
+
+  <!-- ============================================================
+       SICUREZZA (opzionale)
+       Valori: enabled | required | (vuoto = disabilitato)
+       ============================================================ -->
+  <!-- <sdesIncoming>enabled</sdesIncoming> -->
+  <!-- <sdesOutgoing>enabled</sdesOutgoing> -->
+  <!-- <zrtpIncoming>enabled</zrtpIncoming> -->
+  <!-- <zrtpOutgoing>enabled</zrtpOutgoing> -->
+
+  <!-- ============================================================
+       PROVISIONING ESTERNO (per aggiornamenti automatici)
+       ============================================================ -->
+  <!-- <extProvUrl>https://prov.esempio.it/account.php?u=%account[username]%</extProvUrl> -->
+  <!-- <extProvInterval>3600</extProvInterval> -->
+
+  <!-- ============================================================
+       CALL WAITING
+       ============================================================ -->
+  <callWaiting>1</callWaiting>
+
+</account>
