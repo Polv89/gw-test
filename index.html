@@ -14,45 +14,50 @@
         }
         .card { 
             background: white; 
-            padding: 30px; 
+            padding: 40px 30px; 
             border-radius: 16px; 
             box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
             max-width: 400px; 
             margin: 40px auto; 
         }
-        h2 { margin-bottom: 10px; color: #111; }
-        p { color: #666; font-size: 14px; margin-bottom: 30px; line-height: 1.4; }
+        h2 { margin-bottom: 15px; color: #111; }
+        p { color: #666; font-size: 15px; margin-bottom: 30px; line-height: 1.5; }
         .btn { 
             display: block; 
-            padding: 14px; 
+            padding: 16px; 
             color: white; 
             text-decoration: none; 
             border-radius: 8px; 
             font-weight: bold; 
-            font-size: 16px; 
+            font-size: 18px; 
             margin: 15px auto;
-            width: 85%;
-        }
-        .btn-primary {
-            background: #007aff; 
-            box-shadow: 0 4px 6px rgba(0,122,255,0.3);
-        }
-        .btn-secondary {
+            width: 90%;
             background: #34c759; 
             box-shadow: 0 4px 6px rgba(52,199,89,0.3);
+            transition: transform 0.2s;
+        }
+        .btn:active {
+            transform: scale(0.96);
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Configura Groundwire</h2>
-        <p>Svuota la cache del browser, poi premi uno dei due pulsanti per avviare il provisioning dell'interno 17571.</p>
+        <h2>Configurazione in corso...</h2>
+        <p>Groundwire dovrebbe aprirsi automaticamente. Se non succede nulla entro qualche secondo, tocca il pulsante qui sotto.</p>
         
-        <a href="groundwire://provisioning?url=https://polv89.github.io/gw-test/test.xml" class="btn btn-primary">Opzione 1 (iOS Direct)</a>
-        
-        <a href="provlinkbs://polv89.github.io/gw-test/test.xml" class="btn btn-secondary">Opzione 2 (Acrobits Link)</a>
+        <a href="provlinkbs://polv89.github.io/gw-test/test.xml" class="btn">Apri Groundwire</a>
     </div>
+
+    <script>
+        // Tenta di aprire l'app automaticamente 1 secondo dopo il caricamento della pagina
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = "provlinkbs://polv89.github.io/gw-test/test.xml";
+            }, 1000);
+        };
+    </script>
 
 </body>
 </html>
