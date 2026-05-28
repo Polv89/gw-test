@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <account>
   <title>Interno 71 test Groundwire</title>
-  <username>17571</username>
-  <password>p6MhdB9wRa6F</password>
+  <username>username</username>
+  <password>miapassword</password>
   <userDisplayName>Interno 71 test Groundwire display name</userDisplayName>
-  <host>sip2a-test.nwpbx.it</host>
+  <host>host.domain.it</host>
   <transport>udp</transport>
 
   <icm>push</icm>
