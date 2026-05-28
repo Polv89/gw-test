@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<account>
+  <title>Interno 71 test Groundwire</title>
+  <username>17571</username>
+  <password>p6MhdB9wRa6F</password>
+  <userDisplayName>Interno 71 test Groundwire display name</userDisplayName>
+  <host>sip2a-test.nwpbx.it</host>
+  <transport>udp</transport>
+
+  <icm>push</icm>
+  <sipisHostPrefixLength>0</sipisHostPrefixLength>
+  <expires>600</expires>
+
+  <codecOrder>103,9,0,8,18</codecOrder>
+  <codecOrder3G>103,18,0,8</codecOrder3G>
+  <opusOptions.class>wb</opusOptions.class>
+  <opusOptions3G.class>nb</opusOptions3G.class>
+  <dtmfOrder>rfc2833,info,audio</dtmfOrder>
+
+  <allowVideo>0</allowVideo>
+  <allowMessage>0</allowMessage>
+  <callWaiting>1</callWaiting>
+  <natTraversal>auto</natTraversal>
+  <keepAlive>1</keepAlive>
+  <keepAlivePeriod>30</keepAlivePeriod>
+</account>
